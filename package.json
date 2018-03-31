@@ -1,0 +1,16 @@
+{
+  "name": "finalweb",
+  "version": "1.0.0",
+  "description": "Web deployed on heroku to run my own Blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Varox",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "moment": "^2.22.0"
+  }
+}
