@@ -1,8 +1,13 @@
 
 var express = require('express');
 var	app     = express();
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
-
+//Model imports
+var Blog = require('./models/blog.js');
+var Blog = require('./models/comment.js');
+var Blog = require('./models/user.js');
 
 app.locals.moment = require('moment');
 
