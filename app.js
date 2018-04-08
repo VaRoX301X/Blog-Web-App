@@ -6,8 +6,8 @@ var mongoose = require('mongoose');
 
 //Model imports
 var Blog = require('./models/blog.js');
-var Blog = require('./models/comment.js');
-var Blog = require('./models/user.js');
+var Comment = require('./models/comment.js');
+var User = require('./models/user.js');
 
 app.locals.moment = require('moment');
 
