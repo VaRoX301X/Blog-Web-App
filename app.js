@@ -12,7 +12,15 @@ var User = require('./models/user.js');
 
 app.locals.moment = require('moment');
 
+var url = process.env.DATABASEURL || "mongodb://localhost/xorav_db";
+mongoose.connect(url);
+console.log(url);
+
 app.set("view engine", "ejs");
+app.use(methodOverride("_method"));
+app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 var blogRoutes = require("./routes/blogRoutes");
 var indexRoutes = require("./routes/indexRoutes.js");
@@ -20,9 +28,7 @@ var indexRoutes = require("./routes/indexRoutes.js");
 app.use("/blog", blogRoutes);
 app.use("/", indexRoutes);
 
-app.use(methodOverride("_method"));
 
-app.use(express.static(__dirname + "/public"));
 
 app.get("*", function(req, res){
 	res.render("home");
