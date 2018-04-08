@@ -3,6 +3,7 @@ var express = require('express');
 var	app     = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var methodOverride = require('method-override');
 
 //Model imports
 var Blog = require('./models/blog.js');
@@ -18,6 +19,8 @@ var indexRoutes = require("./routes/indexRoutes.js");
 
 app.use("/blog", blogRoutes);
 app.use("/", indexRoutes);
+
+app.use(methodOverride("_method"));
 
 app.use(express.static(__dirname + "/public"));
 
