@@ -1,0 +1,7 @@
+<h1>Here you will see all blogs entries!</h1>
+<% blogs.forEach(function(blog){ %>
+    <img src="<%= blog.image %>" style="height: 200px">
+    <h4><%= blog.title %></h4>
+    <p><%= blog.content %></p>
+    <p><%= moment(blog.createdAt).fromNow() %></p>
+<% }); %>
