@@ -19,7 +19,9 @@ var blogSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
+    //Coding, Personal, Art
+    category: String
 });
 
 module.exports = mongoose.model("Blog", blogSchema);

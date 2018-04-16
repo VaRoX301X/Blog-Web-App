@@ -1,3 +1,7 @@
+<div>
+	<a href="/blog">Back</a>
+</div>
+<br>
 <form action="/blog" method="POST">
 		<div>
 			<label for="">Title</label>
@@ -10,6 +14,12 @@
 		<div>
 			<label for="">Content</label>
 			<textarea name="blog[content]" cols="30" rows="10"></textarea>
+		</div>
+		<div>
+			<label for="">Category</label>
+			<input type="radio" name="blog[category]" value="art"> Art
+  			<input type="radio" name="blog[category]" value="development"> Development
+  			<input type="radio" name="blog[category]" value="personal" checked> Personal 
 		</div>		
 		<input type="submit">				
 	</form>
