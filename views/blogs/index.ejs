@@ -2,6 +2,7 @@
 <div>
     <a href="/blog/new">New Entry</a>
 </div>
+<% blogs.reverse() %>
 <% blogs.forEach(function(blog){ %>
     <img src="<%= blog.image %>" style="height: 200px">
     <p><h4><%= blog.title %></h4><span><%= blog.category %></span></p>
