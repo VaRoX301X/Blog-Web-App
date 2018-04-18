@@ -9,4 +9,8 @@
     <p><%= blog.content %></p>
     
     <p><%= moment(blog.createdAt).fromNow() %></p>
+    <p>
+        <a href="/blog/<%= blog._id %>">More Info</a>
+    </p>
+
 <% }); %>

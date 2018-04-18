@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<h1 style="text-align: center">Edit <%= blog.title %></h1>
+ <form action="/blog/<%= blog._id %>?_method=PUT" method="POST">
+                <div>
+                    Title: 
+                    <input type="text" name="blog[title]" value="<%= blog.title %>">
+                </div>
+                <div>
+                    Image: 
+                    <input type="text" name="blog[image]" value="<%= blog.image %>">
+                </div>
+                <div>
+                    Content: 
+                    <textarea rows="1" cols="50" type="text" name="blog[content]"><%= blog.content %></textarea>
+                </div>
+                <div>
+                    <button>Submit!</button>
+                </div>
+            </form>
+            <a href="/blog">Go Back</a>
+<% include ../partials/footer %>
