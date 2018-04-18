@@ -3,8 +3,7 @@ A blog web app done with the meanStack
 
 Just landing my initial project of a Blog done with the MEAN stack.
 
-TODOS:
-- Use html tags in content of entries (sanitizer)
+MAIN TODOS:
 - Add Comments?
 - Add SUPERUSER
 - Add Account management
@@ -13,3 +12,5 @@ TODOS:
 - Landing Page
 - About
 - Resources?
+SECONDARY TODOS:
+- Use html tags in content of entries (sanitizer)
