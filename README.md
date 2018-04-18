@@ -12,5 +12,6 @@ MAIN TODOS:
 - Landing Page
 - About
 - Resources?
+
 SECONDARY TODOS:
 - Use html tags in content of entries (sanitizer)
