@@ -9,7 +9,7 @@ TODOS:
 - Add SUPERUSER
 - Add Account management
 - Css
-- ArtPlace(for my pixel Art)
+- ArtPlace
 - Landing Page
 - About
 - Resources?
