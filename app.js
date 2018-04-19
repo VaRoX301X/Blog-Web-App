@@ -4,6 +4,8 @@ var	app     = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
+var passport    = require("passport");
+var LocalStrategy = require("passport-local");
 
 //Model imports
 var Blog = require('./models/blog.js');
@@ -29,6 +31,22 @@ app.use("/blog", blogRoutes);
 app.use("/", indexRoutes);
 
 
+//PASSPORT CONFIG
+app.use(require("express-session")({
+    secret: "NOPENOPE",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+app.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    next();
+ });
 
 app.get("*", function(req, res){
 	res.render("home");
