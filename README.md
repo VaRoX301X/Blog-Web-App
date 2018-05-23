@@ -8,7 +8,6 @@ MAIN TODOS:
 - [ ] Add SUPERUSER
 - [ ] Add Account management
 - [ ] Css
-- [ ] ArtPlace
 - [ ] Landing Page
 - [ ] About
 - [ ] Resources?
@@ -16,3 +15,6 @@ MAIN TODOS:
 
 SECONDARY TODOS:
 - [ ] Use html tags in content of entries (sanitizer)
+
+NFS TODOS:
+- [ ] ArtPlace
